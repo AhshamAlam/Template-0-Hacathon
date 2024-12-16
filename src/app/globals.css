@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow-y: scroll;  /* Allows scrolling, but hides the scrollbar visually */
+}
+
+body::-webkit-scrollbar {
+    display: none;  /* Hide the scrollbar */
+}
