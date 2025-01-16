@@ -22,7 +22,7 @@ export default function FeaturedProducts () {
           </h1>
           {/* Call-to-Action Link */}
           <a
-            href="#"
+            href="/shop"
             className="md:mt-5 mt-3 inline-block text-[14px] md:text-[22px] font-medium text-black underline underline-offset-8 md:underline-offset-[18px] decoration-2"
           >
             View More
@@ -46,7 +46,7 @@ export default function FeaturedProducts () {
           </h1>
           {/* Call-to-Action Link */}
           <a
-            href="#"
+            href="/shop"
             className="md:mt-5 mt-3 inline-block text-[14px] md:text-[22px] font-medium text-black underline underline-offset-8 md:underline-offset-[18px] decoration-2"
           >
             View More

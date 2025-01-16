@@ -11,7 +11,7 @@ export default function HeroSection() {
           Rocket single <br /> seater
         </h1>
         <a
-          href="#"
+          href="/shop"
           className="mt-8 md:mt-12 inline-block text-[18px] md:text-[24px] font-medium text-black underline underline-offset-[18px] decoration-2"
         >
           Shop Now

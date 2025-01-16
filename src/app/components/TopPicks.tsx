@@ -83,7 +83,7 @@ export default function TopPicks() {
 
       {/* View More Button */}
       <a
-        href="#" // Link to more products or details
+        href="/shop" // Link to more products or details
         className="mt-5 md:mt-10 inline-block text-[14px] md:text-[20px] font-medium text-black underline underline-offset-8 md:underline-offset-[19px] decoration-2"
       >
         View More

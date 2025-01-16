@@ -36,7 +36,7 @@ export default function Blog() {
             </p>
             {/* Read More Link */}
             <a
-              href="#"
+              href="/about"
               className="mt-3 text-[15px] md:text-[18px] font-medium text-black underline underline-offset-8 md:underline-offset-[13px] decoration-2"
             >
               Read More
@@ -68,7 +68,7 @@ export default function Blog() {
               Going all-in with millennial design
             </p>
             <a
-              href="#"
+              href="/about"
               className="mt-3 text-[15px] md:text-[18px] font-medium text-black underline underline-offset-8 md:underline-offset-[13px] decoration-2"
             >
               Read More
@@ -98,7 +98,7 @@ export default function Blog() {
               Going all-in with millennial design
             </p>
             <a
-              href="#"
+              href="/about"
               className="mt-3 text-[15px] md:text-[18px] font-medium text-black underline underline-offset-8 md:underline-offset-[13px] decoration-2"
             >
               Read More
@@ -115,7 +115,7 @@ export default function Blog() {
 
       {/* View All Posts Button */}
       <a
-        href="#"
+        href="/about"
         className="mt-7 md:mt-10 inline-block text-[14px] md:text-[20px] font-medium text-black underline underline-offset-[19px] decoration-2"
       >
         View More

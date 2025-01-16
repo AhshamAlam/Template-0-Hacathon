@@ -27,17 +27,17 @@ export default function Footer () {
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-[16px] font-medium text-black hover:text-gray-800">
+              <Link href="/shop" className="text-[16px] font-medium text-black hover:text-gray-800">
                 Shop
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-[16px] font-medium text-black hover:text-gray-800">
+              <Link href="/about" className="text-[16px] font-medium text-black hover:text-gray-800">
                 About
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-[16px] font-medium text-black hover:text-gray-800">
+              <Link href="/contact" className="text-[16px] font-medium text-black hover:text-gray-800">
                 Contact
               </Link>
             </li>
