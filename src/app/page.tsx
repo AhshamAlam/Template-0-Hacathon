@@ -11,6 +11,7 @@ import Insta from "./components/Insta";
 export default function Home() {
   return (
     <div>
+
       <Navbar/>
       <HeroSection/>
       <Heroimg/>
@@ -18,6 +19,7 @@ export default function Home() {
       <NewArrival/>
       <Blog/>
       <Insta/>
+    
     </div>
   );
 }
