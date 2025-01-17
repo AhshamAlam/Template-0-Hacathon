@@ -11,7 +11,7 @@ import Insta from "./components/Insta";
 export default function Home() {
   return (
     <div>
-      <Navbar>
+      <Navbar/>
       <HeroSection/>
       <Heroimg/>
       <TopPicks/>
