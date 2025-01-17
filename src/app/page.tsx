@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Heroimg from "./components/FeaturedProducts";
 import TopPicks from "./components/TopPicks";
@@ -10,6 +11,7 @@ import Insta from "./components/Insta";
 export default function Home() {
   return (
     <div>
+      <Navbar>
       <HeroSection/>
       <Heroimg/>
       <TopPicks/>
