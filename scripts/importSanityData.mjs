@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 const client = createClient({
   projectId: "9kzxpzvf",
   dataset: "production",
-  useCdn: false, // Set to true if you want faster reads
+  useCdn: true, // Set to true if you want faster reads
   apiVersion: '2025-01-13',
   token: "sk9cIU5yIJt1P8Fhinj63DoTbO9E9wwgknCgX14paN8bl1gibS14guTjjIz17xesp84UjJSoMPUlysikbpE5J6o8A9ecSQ2CwwrRAAtVcvMhlMzjC0Yym6qqqqX33KrSfa8mvvsFoGtlDECCd9NBO0aSOCJJ9NeFRo4VN4QRmMYT9nNGL0Lq", // Replace with your Sanity token
 });

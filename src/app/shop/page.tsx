@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
 import Filter from './Filter'
-import Products from './Products'
+import Products from './ProductsGallery'
 import Return from './Return'
 
 
