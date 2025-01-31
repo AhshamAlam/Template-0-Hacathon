@@ -1,89 +1,170 @@
-// Indicate that this is a client-side component (React hooks require client-side rendering)
-"use client"; 
+// "use client";
 
-// Import necessary modules for image rendering, routing, and state management
-import Image from "next/image"; // Next.js Image component for optimized images
-import Link from "next/link"; // Next.js Link component for client-side navigation
-import { useState } from "react"; // React hook for managing state (toggle cart)
+// import Link from "next/link";
+// import { useState } from "react";
+// import ShoppingCart from "../shop/ShoppingCart";
+// import { FaHeart, FaSearch, FaShoppingCart, FaUser, FaBars, FaTimes } from "react-icons/fa";
+
+// export default function Navbar() {
+//   const [cartOpen, setCartOpen] = useState(false);
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   const toggleCart = () => {
+//     setCartOpen(!cartOpen);
+//   };
+
+//   const toggleMenu = () => {
+//     setMenuOpen(!menuOpen);
+//   };
+
+//   return (
+//     <nav className="bg-[#FBEBB5] h-[100px] px-4 sm:px-6 md:px-12 lg:px-24 py-4 text-black flex justify-between items-center">
+//       {/* Logo or Placeholder */}
+//       <div></div>
+
+//       {/* Hamburger Menu Icon for Mobile */}
+//       <div className="sm:hidden">
+//         <button onClick={toggleMenu}>
+//           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+//         </button>
+//       </div>
+
+//       {/* Navigation Links */}
+//       <ul className={`${menuOpen ? 'block' : 'hidden'} sm:flex sm:space-x-[72px] absolute sm:static top-[100px] left-0 w-full sm:w-auto bg-[#FBEBB5] sm:bg-transparent flex-col sm:flex-row items-center sm:justify-center space-y-4 sm:space-y-0 py-4 sm:py-0`}>
+//         {[
+//           { href: "/", label: "Home" },
+//           { href: "/shop", label: "Shop" },
+//           { href: "/about", label: "About" },
+//           { href: "/contact", label: "Contact" },
+//         ].map(({ href, label }) => (
+//           <li key={href}>
+//             <Link href={href} className="text-black hover:text-gray-400 font-medium text-[16px]">
+//               {label}
+//             </Link>
+//           </li>
+//         ))}
+//       </ul>
+
+//       {/* Icons Section */}
+//       <div className="hidden sm:flex justify-end space-x-6">
+//         <Link href="/account">
+//           <FaUser className="text-black hover:text-gray-400" size={24} />
+//         </Link>
+//         <FaSearch className="text-black hover:text-gray-400" size={24} />
+//         <FaHeart className="text-black hover:text-gray-400" size={24} />
+//         <button onClick={toggleCart}>
+//           <FaShoppingCart className="text-black hover:text-gray-400" size={24} />
+//         </button>
+//       </div>
+
+//       {/* Shopping Cart Component */}
+//       <ShoppingCart cartOpen={cartOpen} toggleCart={toggleCart} />
+//     </nav>
+//   );
+// }
+
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
 import ShoppingCart from "../shop/ShoppingCart";
+import { FaHeart, FaSearch, FaShoppingCart, FaUser, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
-  // Declare a state variable to control the visibility of the shopping cart
   const [cartOpen, setCartOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Toggle the state of the shopping cart open/closed
   const toggleCart = () => {
-    setCartOpen(!cartOpen); // Change cart visibility based on its previous state
+    setCartOpen(!cartOpen);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className="bg-[#FBEBB5] h-[100px] items-center justify-between px-4 sm:px-6 md:px-12 lg:px-24 py-4 text-black flex">
-      {/* Navbar links section: Visible on medium screens and up */}
-      <ul className="hidden space-x-[72px] md:flex md:relative md:left-[30%]">
-        {/* Each navigation link wraps around the Next.js Link component */}
-        <li>
-          <Link href="/" className="text-black hover:text-gray-400 font-medium text-[16px]">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link href="/shop" className="text-black hover:text-gray-400 font-medium text-[16px]">
-            Shop
-          </Link>
-        </li>
-        <li>
-          <Link href="/about" className="text-black hover:text-gray-400 font-medium text-[16px]">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link href="/contact" className="text-black hover:text-gray-400 font-medium text-[16px]">
-            Contact
-          </Link>
-        </li>
-      </ul>
+    <nav className="bg-[#FBEBB5] h-[100px] px-4 sm:px-6 md:px-12 lg:px-24 py-4 text-black flex justify-between items-center">
+      {/* Logo or Placeholder */}
+      <div></div>
 
-      {/* Icon and cart section: Visible on medium screens and up */}
-      <div className="hidden md:flex space-x-[30px]">
-        {/* Account link with an icon */}
-        <Link href="/account">
-          <Image
-            src="/mdi_account-alert-outline.png" // Image source for account icon
-            alt="Account"
-            width={28}
-            height={28}
-          />
-        </Link>
-        
-        {/* Search icon */}
-        <Image
-          src="/akar-icons_search.png" // Image source for search icon
-          alt="Search"
-          width={28}
-          height={28}
-        />
-        
-        {/* Heart icon for favorites or wishlist */}
-        <Image
-          src="/akar-icons_heart.png" // Image source for heart icon
-          alt="Favorites"
-          width={28}
-          height={28}
-        />
-        
-        {/* Shopping cart button to toggle the cart visibility */}
-        <button onClick={toggleCart}>
-          <Image
-            src="/ant-design_shopping-cart-outlined.png" // Image source for shopping cart icon
-            alt="Shopping Cart"
-            width={28}
-            height={28}
-          />
+      {/* Hamburger Menu Icon for Mobile */}
+      <div className="sm:hidden">
+        <button onClick={toggleMenu}>
+          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
-      {/* The ShoppingCart component is commented out here */}
+      {/* Navigation Links and Icons for Mobile */}
+      <div
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } sm:hidden absolute top-[100px] left-0 w-full bg-[#FBEBB5] py-4`}
+      >
+        <ul className="flex flex-col items-center space-y-6">
+          {[
+            { href: "/", label: "Home" },
+            { href: "/shop", label: "Shop" },
+            { href: "/about", label: "About" },
+            { href: "/contact", label: "Contact" },
+          ].map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className="text-black hover:text-gray-400 font-medium text-[16px]"
+                onClick={toggleMenu} // Close menu on link click
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+          {/* Icons in Mobile Menu */}
+          <div className="flex justify-center space-x-6 mt-4">
+            <Link href="/account" onClick={toggleMenu}>
+              <FaUser className="text-black hover:text-gray-400" size={24} />
+            </Link>
+            <button>
+              <FaSearch className="text-black hover:text-gray-400" size={24} />
+            </button>
+            <button>
+              <FaHeart className="text-black hover:text-gray-400" size={24} />
+            </button>
+            <button onClick={toggleCart}>
+              <FaShoppingCart className="text-black hover:text-gray-400" size={24} />
+            </button>
+          </div>
+        </ul>
+      </div>
+
+      {/* Navigation Links for Desktop */}
+      <ul className="hidden sm:flex sm:space-x-[72px]">
+        {[
+          { href: "/", label: "Home" },
+          { href: "/shop", label: "Shop" },
+          { href: "/about", label: "About" },
+          { href: "/contact", label: "Contact" },
+        ].map(({ href, label }) => (
+          <li key={href}>
+            <Link href={href} className="text-black hover:text-gray-400 font-medium text-[16px]">
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      {/* Icons Section for Desktop */}
+      <div className="hidden sm:flex justify-end space-x-6">
+        <Link href="/account">
+          <FaUser className="text-black hover:text-gray-400" size={24} />
+        </Link>
+        <FaSearch className="text-black hover:text-gray-400" size={24} />
+        <FaHeart className="text-black hover:text-gray-400" size={24} />
+        <button onClick={toggleCart}>
+          <FaShoppingCart className="text-black hover:text-gray-400" size={24} />
+        </button>
+      </div>
+
+      {/* Shopping Cart Component */}
       <ShoppingCart cartOpen={cartOpen} toggleCart={toggleCart} />
-    </div>
+    </nav>
   );
 }
